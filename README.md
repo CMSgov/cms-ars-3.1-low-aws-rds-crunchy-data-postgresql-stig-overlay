@@ -1,5 +1,5 @@
-# cms-ars-3.1-moderate-aws-rds-crunchy-data-postgresql-stig-overlay
-InSpec profile overlay to validate the secure configuration of AWS RDS hosted Crunchy Data PostgreSQL against [DISA](https://iase.disa.mil/stigs/)'s Crunchy Data PostgreSQL Security Technical Implementation Guide (STIG) Version 1, Release 1. (Applies to database versions 10, 11, 12 & 13) tailored for [CMS ARS 3.1](https://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-Information-Technology/InformationSecurity/Info-Security-Library-Items/ARS-31-Publication.html) for CMS systems categorized as Moderate.
+# cms-ars-3.1-low-aws-rds-crunchy-data-postgresql-stig-overlay
+InSpec profile overlay to validate the secure configuration of AWS RDS hosted Crunchy Data PostgreSQL against [DISA](https://iase.disa.mil/stigs/)'s Crunchy Data PostgreSQL Security Technical Implementation Guide (STIG) Version 1, Release 1. (Applies to database versions 10, 11, 12 & 13) tailored for [CMS ARS 3.1](https://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-Information-Technology/InformationSecurity/Info-Security-Library-Items/ARS-31-Publication.html) for CMS systems categorized as Low.
 
 ## Getting Started
 ### InSpec (CINC-auditor) setup
@@ -153,7 +153,7 @@ pg_timezone: 'UTC'
 
 ```
 # How to run
-cinc-auditor exec https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-crunchy-data-postgresql-stig-overlay/archive/master.tar.gz --input-file=<path_to_your_inputs_file/name_of_your_inputs_file.yml> --reporter json:<path_to_your_output_file/name_of_your_output_file.json>
+cinc-auditor exec https://github.com/CMSgov/cms-ars-3.1-low-aws-rds-crunchy-data-postgresql-stig-overlay/archive/master.tar.gz --input-file=<path_to_your_inputs_file/name_of_your_inputs_file.yml> --reporter json:<path_to_your_output_file/name_of_your_output_file.json>
 ```
 
 ### Different Run Options
@@ -171,18 +171,18 @@ When the __"runner"__ host uses this profile overlay for the first time, follow 
 ```
 mkdir profiles
 cd profiles
-git clone https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-crunchy-data-postgresql-stig-overlay.git
-cinc-auditor archive cms-ars-3.1-moderate-aws-rds-crunchy-data-postgresql-stig-overlay
+git clone https://github.com/CMSgov/cms-ars-3.1-low-aws-rds-crunchy-data-postgresql-stig-overlay.git
+cinc-auditor archive cms-ars-3.1-low-aws-rds-crunchy-data-postgresql-stig-overlay
 cinc-auditor exec <name of generated archive> --input-file <path_to_your_input_file/name_of_your_input_file.yml> --reporter json:<path_to_your_output_file/name_of_your_output_file.json>
 ```
 
 For every successive run, follow these steps to always have the latest version of this overlay and dependent profiles:
 
 ```
-cd cms-ars-3.1-moderate-aws-rds-crunchy-data-postgresql-stig-overlay
+cd cms-ars-3.1-low-aws-rds-crunchy-data-postgresql-stig-overlay
 git pull
 cd ..
-cinc-auditor archive cms-ars-3.1-moderate-aws-rds-crunchy-data-postgresql-stig-overlay --overwrite
+cinc-auditor archive cms-ars-3.1-low-aws-rds-crunchy-data-postgresql-stig-overlay --overwrite
 cinc-auditor exec <name of generated archive> --input-file <path_to_your_input_file/name_of_your_input_file.yml> --reporter json:<path_to_your_output_file/name_of_your_output_file.json>
 ```
 
@@ -201,7 +201,7 @@ The JSON InSpec results file may also be loaded into a __[full heimdall server](
 * Shivani Karikar - [karikarshivani](https://github.com/karikarshivani)
 
 ## Contributing and Getting Help
-To report a bug or feature request, please open an [issue](https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-crunchy-data-postgresql-stig-overlay/issues/new).
+To report a bug or feature request, please open an [issue](https://github.com/CMSgov/cms-ars-3.1-low-aws-rds-crunchy-data-postgresql-stig-overlay/issues/new).
 
 ### NOTICE
 
